@@ -16,6 +16,9 @@ p {
   position: relative;
   top: -20px;
 }
+.github-link {
+  text-decoration: none;
+}
 .navigation-items {
   margin: 0;
   font-size: 20px;
