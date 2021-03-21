@@ -1,0 +1,84 @@
+body {
+  font-family: "Roboto Slab", serif;
+}
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+p {
+  color: #dadde1;
+  font-size: 15px;
+  font-family: monospace;
+  margin: 10px auto;
+  line-height: 48px;
+}
+.navigation-items {
+  margin: 0;
+  font-size: 20px;
+  color: #007bff;
+  padding: 0 0 20px;
+}
+.city {
+  text-decoration: none;
+}
+.btn-primary {
+  position: relative;
+  left: -8px;
+  transition: 250ms ease-in-out;
+}
+.btn-success {
+  transition: 250ms ease-in-out;
+}
+.weather-info,
+.summarry,
+.future-forecast {
+  opacity: 0.5;
+}
+.searched-city {
+  position: relative;
+  top: 12px;
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0;
+}
+.weather-info-text {
+  font-size: 16px;
+  height: 19px;
+  line-height: 1;
+}
+.temperature {
+  font-size: 50px;
+  font-weight: 900;
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+}
+.units {
+  position: relative;
+  top: -32px;
+}
+.degree-fahrenheit,
+.degree-celsius {
+  text-decoration: none;
+}
+.fa-sun {
+  font-size: 40px;
+  color: black;
+  font-weight: 900;
+  margin-right: 10px;
+}
+.summarry {
+  list-style: none;
+  position: relative;
+  right: -100px;
+}
+.fa-cloud-sun-rain,
+.fa-cloud-showers-heavy,
+.fa-cloud-sun,
+.fa-cloud-sun,
+.fa-cloud {
+  font-size: 35px;
+  font-weight: 900;
+}
