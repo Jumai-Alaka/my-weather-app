@@ -9,11 +9,12 @@ body {
   border-radius: 10px;
 }
 p {
-  color: #dadde1;
   font-size: 15px;
   font-family: monospace;
-  margin: 10px auto;
-  line-height: 48px;
+  margin: 5px auto;
+  max-width: 600px;
+  position: relative;
+  top: -20px;
 }
 .navigation-items {
   margin: 0;
