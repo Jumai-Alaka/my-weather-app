@@ -1,5 +1,6 @@
 
-function currentDate(date) {
+function formatDate(timestamp) {
+  let date= new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -9,25 +10,24 @@ function currentDate(date) {
     "Friday",
     "Saturday"
   ];
-  let day = days[date.getDay()];
-  let hours = date.getHours();
+  let day = days[timestamp.getDay()];
+  let hours = timestamp.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = timestamp.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let displayDate = document.querySelector("#current-date");
-  displayDate.innerHTML = `${day}  ${hours}:${minutes}`;
-
-  return displayDate.innerHTML;
+  return `${day}  ${hours}:${minutes}`;
 }
 
 function showWeatherInfo(response) {
   document.querySelector("#current-weather-temperature").innerHTML= Math.round(response.data.main.temp);
   document.querySelector("#searched-city").innerHTML= response.data.name;
   document.querySelector("#current-weather-info").innerHTML= response.data.weather[0].main;
+  let dateElement= document.querySelector("#current-date");
+  dateElement.innerHTML= formatDate(response.data.dt * 1000)
   let humidity = response.data.main.humidity;
   let showHumidity = document.querySelector("#humidity");
   showHumidity.innerHTML = `humidity: ${humidity}%`;
@@ -84,9 +84,6 @@ function tempFahrenheit(event) {
   currentTemperature.innerHTML = Math.round((temperature * 9) / 5 + 32);
 }
 
-let now = new Date();
-currentDate(now);
-
 let searchButton = document.querySelector("#searchcity-form");
 searchButton.addEventListener("submit", handleSubmit);
 
@@ -96,7 +93,7 @@ celsiusLink.addEventListener("click", tempCelsius);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", tempFahrenheit);
 
- let currentLocationButton= document.querySelector("#current-button");
- currentLocationButton.addEventListener("click", currentLocation);
+let currentLocationButton= document.querySelector("#current-button");
+currentLocationButton.addEventListener("click", currentLocation);
 
 searchCity("Berlin");
