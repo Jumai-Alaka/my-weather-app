@@ -19,15 +19,6 @@ p {
 .github-link {
   text-decoration: none;
 }
-.navigation-items {
-  margin: 0;
-  font-size: 20px;
-  color: #007bff;
-  padding: 0 0 20px;
-}
-.city {
-  text-decoration: none;
-}
 .btn-primary {
   position: relative;
   left: -8px;
@@ -52,6 +43,9 @@ p {
   height: 19px;
   line-height: 1;
 }
+.current-temperature {
+  margin-top: 12px;
+}
 .temperature {
   font-size: 50px;
   font-weight: 900;
@@ -62,10 +56,6 @@ p {
 .units {
   position: relative;
   top: -32px;
-}
-.degree-fahrenheit,
-.degree-celsius {
-  text-decoration: none;
 }
 .weather-icon {
   height: 68px;
@@ -78,6 +68,7 @@ p {
   list-style: none;
   position: relative;
   right: -100px;
+  margin-top: 15px;
 }
 .future-forecast {
   margin-top: 20px;

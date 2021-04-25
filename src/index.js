@@ -111,34 +111,8 @@ function currentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function tempCelsius(event) {
-  event.preventDefault();
-  let currentTemperature = document.querySelector(
-    "#current-weather-temperature"
-  );
-  let temperature = currentTemperature.innerHTML;
-  temperature = Number(temperature);
-  currentTemperature.innerHTML = Math.round(((temperature - 32) * 5) / 9);
-}
-
-function tempFahrenheit(event) {
-  event.preventDefault();
-  let currentTemperature = document.querySelector(
-    "#current-weather-temperature"
-  );
-  let temperature = currentTemperature.innerHTML;
-  temperature = Number(temperature);
-  currentTemperature.innerHTML = Math.round((temperature * 9) / 5 + 32);
-}
-
 let searchButton = document.querySelector("#searchcity-form");
 searchButton.addEventListener("submit", handleSubmit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", tempCelsius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", tempFahrenheit);
 
 let currentLocationButton= document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", currentLocation);
