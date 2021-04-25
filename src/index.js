@@ -34,6 +34,8 @@ function showWeatherInfo(response) {
   let wind = Math.round(response.data.wind.speed);
   let showWind = document.querySelector("#wind");
   showWind.innerHTML = `wind: ${wind}km/h`;
+  let iconElement= document.querySelector("#current-weather-icon");
+  iconElement.setAttribute("src", ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
 }
 function searchCity(city) {
   let weatherApikey = "f449583012c431c47d4518085b0faa44";
