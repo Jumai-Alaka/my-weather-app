@@ -36,10 +36,9 @@ p {
 .btn-success {
   transition: 250ms ease-in-out;
 }
-.weather-info,
 .summarry,
-.future-forecast {
-  opacity: 0.5;
+.weather-info {
+  opacity: 0.6;
 }
 .searched-city {
   position: relative;
@@ -80,11 +79,17 @@ p {
   position: relative;
   right: -100px;
 }
-.fa-cloud-sun-rain,
-.fa-cloud-showers-heavy,
-.fa-cloud-sun,
-.fa-cloud-sun,
-.fa-cloud {
-  font-size: 35px;
-  font-weight: 900;
+.future-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+}
+.weather-forecast-date {
+  font-size: 16px;
+}
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
