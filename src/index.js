@@ -35,7 +35,8 @@ function showWeatherInfo(response) {
   let showWind = document.querySelector("#wind");
   showWind.innerHTML = `wind: ${wind}km/h`;
   let iconElement= document.querySelector("#current-weather-icon");
-  iconElement.setAttribute("src", ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
+  iconElement.setAttribute("src", ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description); 
 }
 function searchCity(city) {
   let weatherApikey = "f449583012c431c47d4518085b0faa44";
