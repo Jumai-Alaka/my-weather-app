@@ -33,10 +33,6 @@ p {
 .btn-success {
   transition: 250ms ease-in-out;
 }
-.summarry,
-.weather-info {
-  opacity: 0.6;
-}
 .searched-city {
   position: relative;
   top: 12px;
